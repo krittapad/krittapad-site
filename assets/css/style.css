@@ -686,7 +686,7 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 5mm 6mm;
+    margin: 12mm;
   }
 
   * {
@@ -695,10 +695,12 @@ a {
   }
 
   body {
-    background: #fff;
+    background: var(--bg);
     color: #111;
-    font-size: 6.8pt;
-    line-height: 1.08;
+    font-size: 10.2pt;
+    line-height: 1.34;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .site-header,
@@ -717,28 +719,29 @@ a {
 
   .resume__head {
     display: block;
-    padding-bottom: 2.5mm;
-    border-bottom: 1px solid #111;
+    padding: 4mm 0 7mm;
+    border-bottom: 1px solid var(--line);
   }
 
   .resume__name {
-    font-size: 17pt;
+    color: #111;
+    font-size: 31pt;
     line-height: 1;
     text-align: center;
   }
 
   .resume__role {
-    margin-top: 1.5mm;
-    color: #111;
-    font-size: 10.5pt;
+    margin-top: 3.5mm;
+    color: var(--gold);
+    font-size: 17pt;
     letter-spacing: 0.16em;
     text-align: center;
   }
 
   .resume__contact {
     justify-content: center;
-    gap: 1mm 4mm;
-    margin-top: 1.5mm;
+    gap: 2mm 6mm;
+    margin-top: 4mm;
     color: #111;
   }
 
@@ -748,49 +751,49 @@ a {
   }
 
   .resume__section {
-    margin-top: 2.4mm;
+    margin-top: 7mm;
   }
 
   .resume__section h2 {
-    margin: 0 0 1mm;
-    padding-bottom: 0.6mm;
-    color: #111;
-    font-size: 7.5pt;
-    border-bottom: 1px solid #111;
+    margin: 0 0 2.2mm;
+    padding-bottom: 1.1mm;
+    color: var(--gold);
+    font-size: 10.8pt;
+    border-bottom: 1px solid var(--line);
   }
 
   .resume__summary {
     max-width: none;
     color: #111;
-    font-size: 6.8pt;
+    font-size: 10.2pt;
   }
 
   .job {
-    padding: 0.7mm 0;
+    padding: 1.9mm 0;
     border-bottom: 0;
   }
 
   .job__head {
-    gap: 2mm;
+    gap: 4mm;
   }
 
   .job__company,
-  .job__role,
-  .job__dates {
+  .job__role {
     color: #111;
   }
 
   .job__dates {
-    font-size: 6.5pt;
+    color: var(--gold);
+    font-size: 9.3pt;
   }
 
   .job ul {
-    margin: 0.4mm 0 0;
-    padding-left: 3.5mm;
+    margin: 1.1mm 0 0;
+    padding-left: 5.4mm;
     color: #111;
   }
 
   .job li + li {
-    margin-top: 0.2mm;
+    margin-top: 0.75mm;
   }
 }
